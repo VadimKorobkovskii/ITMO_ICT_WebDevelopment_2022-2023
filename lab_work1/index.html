@@ -499,67 +499,67 @@
 подгружает из файла index.html.</p>
 <p>Обязательно использовать библиотеку <code>socket</code>.</p>
 <ul>
-<li>
-<p><code>Файл index.html</code>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">&lt;</span><span class="err">!</span><span class="n">DOCTYPE</span> <span class="n">html</span><span class="o">&gt;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="o">&lt;</span><span class="n">html</span> <span class="n">lang</span><span class="o">=</span><span class="s2">&quot;en&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="o">&lt;</span><span class="n">meta</span> <span class="n">charset</span><span class="o">=</span><span class="s2">&quot;UTF-8&quot;</span><span class="o">&gt;</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="o">&lt;</span><span class="n">title</span><span class="o">&gt;</span><span class="n">Results</span> <span class="n">of</span> <span class="n">the</span> <span class="n">second</span> <span class="nb">round</span> <span class="n">of</span> <span class="n">the</span> <span class="n">group</span> <span class="n">stage</span> <span class="n">of</span> <span class="n">the</span> <span class="n">Champions</span> <span class="n">League</span> <span class="n">season</span> <span class="mi">2022</span><span class="o">/</span><span class="mi">2023</span><span class="o">&lt;/</span><span class="n">title</span><span class="o">&gt;</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="o">&lt;/</span><span class="n">head</span><span class="o">&gt;</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="o">&lt;</span><span class="n">body</span><span class="o">&gt;</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span> <span class="n">Group</span> <span class="n">A</span> <span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  <span class="o">&lt;</span><span class="n">article</span><span class="o">&gt;</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    <span class="n">Liverpool</span> <span class="mi">2</span><span class="p">:</span><span class="mi">1</span> <span class="n">Ajax</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="o">&lt;</span><span class="n">br</span> <span class="o">/&gt;</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    <span class="n">Rangers</span> <span class="mi">0</span><span class="p">:</span><span class="mi">3</span> <span class="n">Napoli</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>  <span class="o">&lt;/</span><span class="n">article</span><span class="o">&gt;</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>  <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span> <span class="n">Group</span> <span class="n">B</span> <span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>  <span class="o">&lt;</span><span class="n">article</span><span class="o">&gt;</span>
-<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    <span class="n">Bayer</span> <span class="mi">2</span><span class="p">:</span><span class="mi">0</span> <span class="n">Atletico</span>
-<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    <span class="o">&lt;</span><span class="n">br</span> <span class="o">/&gt;</span>
-<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    <span class="n">Portu</span> <span class="mi">0</span><span class="p">:</span><span class="mi">4</span> <span class="n">Brugge</span>
-<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>  <span class="o">&lt;/</span><span class="n">article</span><span class="o">&gt;</span>
-<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>  <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span> <span class="n">Group</span> <span class="n">C</span> <span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>  <span class="o">&lt;</span><span class="n">article</span><span class="o">&gt;</span>
-<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    <span class="n">Victoria</span> <span class="n">Plzen</span> <span class="mi">0</span><span class="p">:</span><span class="mi">2</span> <span class="n">Inter</span>
-<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>    <span class="o">&lt;</span><span class="n">br</span> <span class="o">/&gt;</span>
-<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    <span class="n">Bayern</span> <span class="n">Munich</span> <span class="mi">2</span><span class="p">:</span><span class="mi">0</span> <span class="n">Barcelona</span>
-<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>  <span class="o">&lt;/</span><span class="n">article</span><span class="o">&gt;</span>
-<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>  <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span> <span class="n">Group</span> <span class="n">D</span> <span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>  <span class="o">&lt;</span><span class="n">article</span><span class="o">&gt;</span>
-<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>    <span class="n">Sporting</span> <span class="mi">2</span><span class="p">:</span><span class="mi">0</span> <span class="n">Tottenham</span>
-<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>    <span class="o">&lt;</span><span class="n">br</span> <span class="o">/&gt;</span>
-<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>    <span class="n">Marseille</span> <span class="mi">0</span><span class="p">:</span><span class="mi">1</span> <span class="n">Eintracht</span>
-<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>  <span class="o">&lt;/</span><span class="n">article</span><span class="o">&gt;</span>
-<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>  <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span> <span class="n">Group</span> <span class="n">E</span> <span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>  <span class="o">&lt;</span><span class="n">article</span><span class="o">&gt;</span>
-<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>    <span class="n">Milan</span> <span class="mi">3</span><span class="p">:</span><span class="mi">1</span> <span class="n">Dinamo</span> <span class="n">Zagreb</span>
-<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>    <span class="o">&lt;</span><span class="n">br</span> <span class="o">/&gt;</span>
-<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>    <span class="n">Chelsea</span> <span class="mi">1</span><span class="p">:</span><span class="mi">1</span> <span class="n">Red</span> <span class="n">Bull</span> <span class="n">Salzburg</span>
-<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>  <span class="o">&lt;/</span><span class="n">article</span><span class="o">&gt;</span>
-<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>  <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span> <span class="n">Group</span> <span class="n">F</span> <span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>  <span class="o">&lt;</span><span class="n">article</span><span class="o">&gt;</span>
-<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>    <span class="n">Shakhtar</span> <span class="n">Donetzk</span> <span class="mi">1</span><span class="p">:</span><span class="mi">1</span> <span class="n">Celtic</span>
-<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>    <span class="o">&lt;</span><span class="n">br</span> <span class="o">/&gt;</span>
-<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>    <span class="n">Real</span> <span class="n">Madrid</span> <span class="mi">2</span><span class="p">:</span><span class="mi">0</span> <span class="n">Red</span> <span class="n">Bull</span> <span class="n">Leipzig</span>
-<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>  <span class="o">&lt;/</span><span class="n">article</span><span class="o">&gt;</span>
-<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>  <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span> <span class="n">Group</span> <span class="n">G</span> <span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>  <span class="o">&lt;</span><span class="n">article</span><span class="o">&gt;</span>
-<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>    <span class="n">Manchester</span> <span class="n">City</span> <span class="mi">2</span><span class="p">:</span><span class="mi">1</span> <span class="n">Borussia</span> <span class="n">Dortmund</span>
-<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>    <span class="o">&lt;</span><span class="n">br</span> <span class="o">/&gt;</span>
-<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>    <span class="n">Copenhagen</span> <span class="mi">0</span><span class="p">:</span><span class="mi">0</span> <span class="n">Sevilla</span>
-<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>  <span class="o">&lt;/</span><span class="n">article</span><span class="o">&gt;</span>
-<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>  <span class="o">&lt;</span><span class="n">h1</span><span class="o">&gt;</span> <span class="n">Group</span> <span class="n">H</span> <span class="o">&lt;/</span><span class="n">h1</span><span class="o">&gt;</span>
-<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>  <span class="o">&lt;</span><span class="n">article</span><span class="o">&gt;</span>
-<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>    <span class="n">Maccabi</span> <span class="n">Haifa</span> <span class="mi">1</span><span class="p">:</span><span class="mi">3</span> <span class="n">PSG</span>
-<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>    <span class="o">&lt;</span><span class="n">br</span> <span class="o">/&gt;</span>
-<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>    <span class="n">Juventus</span> <span class="mi">1</span><span class="p">:</span><span class="mi">2</span> <span class="n">Benfica</span>
-<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>  <span class="o">&lt;/</span><span class="n">article</span><span class="o">&gt;</span>
-<a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a><span class="o">&lt;/</span><span class="n">body</span><span class="o">&gt;</span>
-<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a><span class="o">&lt;/</span><span class="n">html</span><span class="o">&gt;</span>
-</code></pre></div></p>
-</li>
+<li><code>Файл index.html</code></li>
+</ul>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>Results of the second round of the group stage of the Champions League season 2022/2023<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> Group A <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>  <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>    Liverpool 2:1 Ajax
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>    <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>    Rangers 0:3 Napoli
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>  <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> Group B <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>  <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>    Bayer 2:0 Atletico
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>    <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    Portu 0:4 Brugge
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>  <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> Group C <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>  <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>    Victoria Plzen 0:2 Inter
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>    <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>    Bayern Munich 2:0 Barcelona
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>  <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> Group D <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>  <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>    Sporting 2:0 Tottenham
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>    <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>    Marseille 0:1 Eintracht
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>  <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> Group E <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>  <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>    Milan 3:1 Dinamo Zagreb
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>    <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>    Chelsea 1:1 Red Bull Salzburg
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>  <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> Group F <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-4-39" name="__codelineno-4-39" href="#__codelineno-4-39"></a>  <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-4-40" name="__codelineno-4-40" href="#__codelineno-4-40"></a>    Shakhtar Donetzk 1:1 Celtic
+<a id="__codelineno-4-41" name="__codelineno-4-41" href="#__codelineno-4-41"></a>    <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<a id="__codelineno-4-42" name="__codelineno-4-42" href="#__codelineno-4-42"></a>    Real Madrid 2:0 Red Bull Leipzig
+<a id="__codelineno-4-43" name="__codelineno-4-43" href="#__codelineno-4-43"></a>  <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-4-44" name="__codelineno-4-44" href="#__codelineno-4-44"></a>  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> Group G <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-4-45" name="__codelineno-4-45" href="#__codelineno-4-45"></a>  <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-4-46" name="__codelineno-4-46" href="#__codelineno-4-46"></a>    Manchester City 2:1 Borussia Dortmund
+<a id="__codelineno-4-47" name="__codelineno-4-47" href="#__codelineno-4-47"></a>    <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<a id="__codelineno-4-48" name="__codelineno-4-48" href="#__codelineno-4-48"></a>    Copenhagen 0:0 Sevilla
+<a id="__codelineno-4-49" name="__codelineno-4-49" href="#__codelineno-4-49"></a>  <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-4-50" name="__codelineno-4-50" href="#__codelineno-4-50"></a>  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> Group H <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-4-51" name="__codelineno-4-51" href="#__codelineno-4-51"></a>  <span class="p">&lt;</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-4-52" name="__codelineno-4-52" href="#__codelineno-4-52"></a>    Maccabi Haifa 1:3 PSG
+<a id="__codelineno-4-53" name="__codelineno-4-53" href="#__codelineno-4-53"></a>    <span class="p">&lt;</span><span class="nt">br</span> <span class="p">/&gt;</span>
+<a id="__codelineno-4-54" name="__codelineno-4-54" href="#__codelineno-4-54"></a>    Juventus 1:2 Benfica
+<a id="__codelineno-4-55" name="__codelineno-4-55" href="#__codelineno-4-55"></a>  <span class="p">&lt;/</span><span class="nt">article</span><span class="p">&gt;</span>
+<a id="__codelineno-4-56" name="__codelineno-4-56" href="#__codelineno-4-56"></a><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-4-57" name="__codelineno-4-57" href="#__codelineno-4-57"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<ul>
 <li>
 <p><code>Серверная часть, файл server.py</code>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">import</span> <span class="nn">socket</span>
